@@ -15,9 +15,27 @@ export default function WeatherApp() {
       type="submit"
       value="Search"
       className="btn btn-primary"/>
-    </div>
-    </div>
-      </form>
+    </div >
+      </div >
+      </form >
+        <h1>London</h1>
+  <ul>
+        <li>Saturday 15:20</li>
+        <li>Description: Sunny</li>
+  </ul>
+  <div className="row"
+        <div className="col-6"
+      <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/weather-icon.png"/>
+  14°C
+  </div >
+    <div className="col-6"
+    <ul>
+    <li> Humidity: 30%</li>
+    <li>Wind: 7km/h</li>
+    </ul>
+  </div >
+    </div >
+      </div>
   );
 }
 
