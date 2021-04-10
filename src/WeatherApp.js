@@ -26,7 +26,6 @@ export default function WeatherApp() {
   </ul>
   <div className="row">
         <div className="col-6">
-      <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/weather-icon.png"/>
   14°C
 </div>
     <div className="col-6">
