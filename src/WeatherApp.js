@@ -3,6 +3,8 @@ import React from "react";
 
 export default function WeatherApp() {
   return (
+    <div className="card">
+      <div className="card-body">
     <div className="Weather">
     <form>
       <div className="row">
@@ -21,21 +23,19 @@ export default function WeatherApp() {
        </form> 
         <h1>London</h1>
   <ul>
-        <li>Saturday 15:20</li>
+        <li>Saturday, 12 April 15:20</li>
         <li>Description: Sunny</li>
-  </ul>
+        <li> Humidity: 30%</li>
+        <li>Wind: 7km/h</li>
+      </ul>
   <div className="row">
         <div className="col-6">
   14°C
 </div>
-    <div className="col-6">
-    <ul>
-    <li> Humidity: 30%</li>
-    <li>Wind: 7km/h</li>
-    </ul>
-  </div >
     </div >
-     </div> 
+        </div>
+      </div>
+    </div>
   );
 }
 
