@@ -1,4 +1,4 @@
-import './App.css';
+import './WeatherApp.css';
 import React from "react";
 
 export default function WeatherApp() {
