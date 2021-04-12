@@ -24,13 +24,17 @@ export default function WeatherApp() {
         <h1>London</h1>
   <ul>
         <li>Saturday, 12 April 15:20</li>
-        <li>Description: Sunny</li>
-        <li> Humidity: 30%</li>
-        <li>Wind: 7km/h</li>
-      </ul>
+       
+          </ul>
+          <span className="temperature">14°C</span>
   <div className="row">
-        <div className="col-6">
-  14°C
+            <div className="col-8">
+              <ul>
+                <li>Description: Sunny</li>
+                <li> Humidity: 30%</li>
+                <li>Wind: 7km/h</li>
+              </ul>
+  
 </div>
     </div >
         </div>
