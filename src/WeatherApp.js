@@ -3,32 +3,33 @@ import React from "react";
 
 export default function WeatherApp() {
   return (
-    <div className="card">
-      <div className="card-body">
+    <div container>
     <div className="Weather">
     <form>
       <div className="row">
-        <div className="col-9">
+        <div className="col-5">
       <input type="search"
         placeholder="Type a city..."
-        className="form-control"/>
-      </div>
-    <div className="col-3">
-      <input 
+                className="form-control" />
+              <input 
       type="submit"
       value="Search"
       className="btn btn-primary"/>
-    </div >
-      </div >
-       </form> 
-        <h1>London</h1>
+            </div>
+          </div >
+        </form> 
+        <h1>
+          <i className="fas fa-map-marker-alt"></i>
+            
+            {" "}London
+        </h1>
   <ul>
         <li>Saturday, 12 April 15:20</li>
        
           </ul>
           <span className="temperature">14°C</span>
   <div className="row">
-            <div className="col-8">
+            <div className="col-9">
               <ul>
                 <li>Description: Sunny</li>
                 <li> Humidity: 30%</li>
@@ -37,7 +38,6 @@ export default function WeatherApp() {
   
 </div>
     </div >
-        </div>
       </div>
     </div>
   );

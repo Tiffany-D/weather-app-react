@@ -1,4 +1,12 @@
-.card {
-    border: 2px black;
+.Weather {
+    color: blueviolet;
 
+
+}
+.Weather i {
+    font-size: 18px;
+}
+
+.Weather ul {
+    list-style: none;
 }
