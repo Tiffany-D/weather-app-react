@@ -5,17 +5,17 @@ import axios from "axios";
 
 export default function WeatherApp() {
 
-  function handleResponse(response) {
-    console.log(response.data);
-}
+  //function handleResponse(response) {
+   // console.log(response.data);
+//}
 
 
 
 
-  let apiKey = "09fa0f7b1ffedeb38b6e5527906a4325";
-  let city = "London";
-  let apiUrl = `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
-  axios.get(apiUrl).then(handleResponse);
+  //let apiKey = "09fa0f7b1ffedeb38b6e5527906a4325";
+  //let city = "London";
+  //let apiUrl = `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
+  //axios.get(apiUrl).then(handleResponse);
   return (
    
     <div container>
