@@ -1,6 +1,7 @@
 import './AppDisplay.css';
 import React, {useState} from "react";
 import axios from "axios";
+import DateAndTime from "./DateAndTime";
 
 
 export default function WeatherApp(props) {
@@ -12,6 +13,7 @@ export default function WeatherApp(props) {
    
 
       setWeatherData({
+        date: new Date(response.data.dt*1000),
         loaded:true,
         temperature: response.data.main.temp,
         wind: response.data.wind.speed,
@@ -46,10 +48,11 @@ export default function WeatherApp(props) {
             {" "}{weatherData.city}
         </h1>
           <ul>
-            <li>Saturday, 12 April 15:20</li>
+            <li></li>
+            <DateAndTime date={weatherData.date} />
        
           </ul>
-          <span className="temperature">14°C</span>
+          <span className="temperature">{Math.round(weatherData.temperature)}°C</span>
           <div className="row">
             <div className="col-9">
               <ul>

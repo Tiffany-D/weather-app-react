@@ -6,7 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <WeatherApp defaultCity="London"/>
+    <WeatherApp defaultCity="London" />
+    <footer>
+      Coded by TiffanyD. and open-sourced on
+      <a href="https://github.com/Tiffany-D/weather-app-react">{" "}Github</a>
+    </footer>
   </React.StrictMode>,
   document.getElementById('root')
 );
