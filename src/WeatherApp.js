@@ -1,8 +1,11 @@
 import './AppDisplay.css';
 import React, {useState} from "react";
 import axios from "axios";
+import DateAndTime from "./DateAndTime";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
-import SearchEngine from "./SearchEngine";
+
 
 
 export default function WeatherApp(props) {
@@ -43,8 +46,29 @@ export default function WeatherApp(props) {
  
   if (weatherData.loaded) {
     return ( 
-      <div container>
-        <div className="Weather">
+      <div className="WeatherApp">
+      <h1>
+            
+            {" "}{props.weatherData.city}
+        </h1>
+          <ul>
+            <li></li>
+            <DateAndTime date={props.weatherData.date} />
+       
+        </ul>
+        <WeatherIcon code={props.data.icon} />
+        <WeatherTemperature celsius={props.data.temperature} />
+        
+          <div className="row">
+            <div className="col-9">
+              <ul>
+                <li className="text-capitalize">Description: {props.weatherData.description}</li>
+                <li> Humidity: {props.weatherData.humidity}%</li>
+                <li>Wind: {props.weatherData.wind}km/h</li>
+              </ul>
+            </div>
+          </div >
+      
           <form onSubmit={handleSubmit}>
             <div className="row">
               <div className="col-5">
@@ -59,9 +83,10 @@ export default function WeatherApp(props) {
               </div>
             </div >
           </form>
-          <SearchEngine data={weatherData}/>
-        </div>
-      </div>
+          </div>
+ 
+      
+          
   );
   }else{
 
