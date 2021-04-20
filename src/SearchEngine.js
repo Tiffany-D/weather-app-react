@@ -1,5 +1,7 @@
 import React from "react";
 import DateAndTime from "./DateAndTime";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 
 
@@ -14,8 +16,10 @@ export default function SearchEngine(props) {
             <li></li>
             <DateAndTime date={props.weatherData.date} />
        
-          </ul>
-          <span className="temperature">{Math.round(props.weatherData.temperature)}°C</span>
+        </ul>
+        <WeatherIcon code={props.data.icon} />
+        <WeatherTemperature celsius={props.data.temperature} />
+        
           <div className="row">
             <div className="col-9">
               <ul>
