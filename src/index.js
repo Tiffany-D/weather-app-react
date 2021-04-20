@@ -8,8 +8,8 @@ ReactDOM.render(
   <React.StrictMode>
     <WeatherApp defaultCity="London" />
     <footer>
-      Coded by TiffanyD. and is<a href="https://github.com/Tiffany-D/weather-app-react">open-sourced on
-      {" "}Github</a>
+      Coded by TiffanyD. and is{" "}<a href="https://github.com/Tiffany-D/weather-app-react">open-sourced on
+      Github</a>
     </footer>
   </React.StrictMode>,
   document.getElementById('root')

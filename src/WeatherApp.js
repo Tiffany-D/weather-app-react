@@ -67,7 +67,7 @@ export default function WeatherApp(props) {
 
 
 
-    return "Loading...";
+    return null;
     
 }
   
