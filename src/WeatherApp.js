@@ -36,7 +36,7 @@ export default function WeatherApp(props) {
   }
   function search() {
       let apiKey = "09fa0f7b1ffedeb38b6e5527906a4325";
-  let apiUrl = `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
   }
   function cityChange(event) {
@@ -49,22 +49,22 @@ export default function WeatherApp(props) {
       <div className="WeatherApp">
       <h1>
             
-            {" "}{props.weatherData.city}
+            {" "}{weatherData.city}
         </h1>
           <ul>
-            <li></li>
-            <DateAndTime date={props.weatherData.date} />
-       
+            <li>
+            <DateAndTime date={weatherData.date} />
+       </li>
         </ul>
-        <WeatherIcon code={props.data.icon} />
-        <WeatherTemperature celsius={props.data.temperature} />
+        <WeatherIcon code={weatherData.icon} />
+        <WeatherTemperature celsius={weatherData.temperature} />
         
           <div className="row">
             <div className="col-9">
               <ul>
-                <li className="text-capitalize">Description: {props.weatherData.description}</li>
-                <li> Humidity: {props.weatherData.humidity}%</li>
-                <li>Wind: {props.weatherData.wind}km/h</li>
+                <li className="text-capitalize">Description: {weatherData.description}</li>
+                <li> Humidity: {weatherData.humidity}%</li>
+                <li>Wind: {weatherData.wind}km/h</li>
               </ul>
             </div>
           </div >
