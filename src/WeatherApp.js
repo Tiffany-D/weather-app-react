@@ -1,4 +1,5 @@
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState} from "react";
 import axios from "axios";
 import DateAndTime from "./DateAndTime";
@@ -48,55 +49,60 @@ export default function WeatherApp(props) {
   if (weatherData.loaded) {
     return ( 
       <div className="WeatherApp">
-        <div class="card">
-  <div class="card-body">
-
-        <div className="row">
-          <div className="col-9">
-            
-            <form onSubmit={handleSubmit}>
-            <div className="row">
-              <div className="col-5">
-                <input type="search"
+        <div className="card">
+          <div className="card-body">
+        <form  onSubmit={handleSubmit}>
+   
+                 <div className="row">
+          <div className="col-6">
+         <input type="search"
                   placeholder="Type a city..."
                 className="form-control"
               onChange={cityChange}
               />
-                <input
+              
+                  <div className="col-20">
+           <input
                   type="submit"
                   value="Search"
-                  className="btn btn-primary"
+                className="btn btn-primary"
+                
                   />
-              </div>
-            </div >
-          </form>
+         
+            </div>
+              
+            </div> 
+             </div>       
+              </form>
+          
+            
+          
       <h1>
             
             {" "}{weatherData.city}
         </h1>
-          <ul>
-            <li>
-            <DateAndTime date={weatherData.date} />
-       </li>
-        </ul>
+        
+        <DateAndTime date={weatherData.date} />
+        <div className="row">
+          <div className="col-6">
         <WeatherIcon code={weatherData.icon} />
         <WeatherTemperature celsius={weatherData.temperature} />
-        
-          
-              <ul>
+        </div>
+        </div>
+           <div className="row">
+          <div className="col-7">
+            <div className="right">
+              <ul className="list">
                 <li className="text-capitalize">Description: {weatherData.description}</li>
                 <li> Humidity: {weatherData.humidity}%</li>
                 <li>Wind: {weatherData.wind}km/h</li>
               </ul>
-            </div>
-          </div >
-      
-          
-          </div>
         </div>
+      </div>
+      </div>
         </div>
-      
-          
+      </div>
+      </div>    
   );
   } else {
     search();

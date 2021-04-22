@@ -1,3 +1,27 @@
 .card {
-  border-radius: 3px black;
+  display: center;
+  margin: 120px;
+  margin-left: 190px;
+  
+  border: 15px solid black;
+  max-width: 700px;
+}
+
+.form-control {
+margin: 15px;
+}
+
+.btn {
+margin: 15px;
+
+}
+
+.list {
+  text-align: right;
+  list-style: none;
+  float: right;
+}
+
+footer {
+  text-align: center;
 }
