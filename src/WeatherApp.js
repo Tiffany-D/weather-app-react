@@ -88,11 +88,9 @@ export default function WeatherApp(props) {
       
           
   );
-  }else{
-
-
-
-    return null;
+  } else {
+    search();
+return null;
     
 }
   
