@@ -25,6 +25,7 @@ export default function WeatherApp(props) {
         humidity: response.data.main.humidity,
         description: response.data.weather[0].description,
         city: response.data.name,
+        icon: response.data.weather[0].icon
       
       });
       
@@ -74,12 +75,14 @@ export default function WeatherApp(props) {
               <div className="col-5">
                 <input type="search"
                   placeholder="Type a city..."
-                  className="form-control" />
+                className="form-control"
+              onChange={cityChange}
+              />
                 <input
                   type="submit"
                   value="Search"
                   className="btn btn-primary"
-                  onChange={cityChange}/>
+                  />
               </div>
             </div >
           </form>
