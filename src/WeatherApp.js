@@ -1,4 +1,4 @@
-import './AppDisplay.css';
+import './index.css';
 import React, {useState} from "react";
 import axios from "axios";
 import DateAndTime from "./DateAndTime";
@@ -48,29 +48,13 @@ export default function WeatherApp(props) {
   if (weatherData.loaded) {
     return ( 
       <div className="WeatherApp">
-      <h1>
+        <div class="card">
+  <div class="card-body">
+
+        <div className="row">
+          <div className="col-9">
             
-            {" "}{weatherData.city}
-        </h1>
-          <ul>
-            <li>
-            <DateAndTime date={weatherData.date} />
-       </li>
-        </ul>
-        <WeatherIcon code={weatherData.icon} />
-        <WeatherTemperature celsius={weatherData.temperature} />
-        
-          <div className="row">
-            <div className="col-9">
-              <ul>
-                <li className="text-capitalize">Description: {weatherData.description}</li>
-                <li> Humidity: {weatherData.humidity}%</li>
-                <li>Wind: {weatherData.wind}km/h</li>
-              </ul>
-            </div>
-          </div >
-      
-          <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
             <div className="row">
               <div className="col-5">
                 <input type="search"
@@ -86,8 +70,31 @@ export default function WeatherApp(props) {
               </div>
             </div >
           </form>
+      <h1>
+            
+            {" "}{weatherData.city}
+        </h1>
+          <ul>
+            <li>
+            <DateAndTime date={weatherData.date} />
+       </li>
+        </ul>
+        <WeatherIcon code={weatherData.icon} />
+        <WeatherTemperature celsius={weatherData.temperature} />
+        
+          
+              <ul>
+                <li className="text-capitalize">Description: {weatherData.description}</li>
+                <li> Humidity: {weatherData.humidity}%</li>
+                <li>Wind: {weatherData.wind}km/h</li>
+              </ul>
+            </div>
+          </div >
+      
+          
           </div>
- 
+        </div>
+        </div>
       
           
   );
