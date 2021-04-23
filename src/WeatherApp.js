@@ -92,16 +92,17 @@ export default function WeatherApp(props) {
             <br />
             </div>
         <div className="row">
-              <div className="col-2">
-                
-        <WeatherIcon code={weatherData.icon} />
+              <div className="col-6">
+                <WeatherIcon code={weatherData.icon} />
+                  <div className="temp">
+                <WeatherTemperature celsius={weatherData.temperature} />
+             </div> 
+   
         
         </div>
             </div>
             
-                <div className="temp">
-                <WeatherTemperature celsius={weatherData.temperature} />
-             </div>
+             
            <div className="row">
           <div className="col-12">
             <div className="right">
