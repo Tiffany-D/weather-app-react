@@ -80,16 +80,25 @@ export default function WeatherApp(props) {
           
       <h1>
             
-            {" "}{weatherData.city}
+            <i class="bi bi-geo-alt-fill">{" "}{weatherData.city}</i>
         </h1>
         
-        <DateAndTime date={weatherData.date} />
+            <DateAndTime date={weatherData.date} />
+            <br />
+            <br />
+            <br />
+            
         <div className="row">
-          <div className="col-6">
+              <div className="col-2">
+                
         <WeatherIcon code={weatherData.icon} />
-        <WeatherTemperature celsius={weatherData.temperature} />
+        
         </div>
-        </div>
+            </div>
+            
+                <div className="temp">
+                <WeatherTemperature celsius={weatherData.temperature} />
+             </div>
            <div className="row">
           <div className="col-12">
             <div className="right">

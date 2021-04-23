@@ -1,15 +1,16 @@
 .card {
+  display: inline-flex;
   flex-direction: row;
-  border-radius :30px;
+  border-radius :20px;
   margin: 120px;
   margin-left: 130px;
-  max-width: 700px;
+  max-width: 500px;
 }
 
 .form-control {
 margin: 15px;
 border-radius: 20px;
-border: blueviolet;
+border:1px solid #113f67;
 }
 
 .btn {
@@ -21,8 +22,9 @@ margin-left: 1px;
 }
 
 .list {
-  list-style: none;
   float: right;
+  list-style: none;
+  
 }
 
 footer {
@@ -30,4 +32,13 @@ footer {
 }
 h1 {
   color: #5e63b6;
+  font-size: 20px;
 }
+
+.temp{
+  margin: 90px;
+  margin-top: 1px;
+  font-weight:bold;
+  font-size: 30px;
+}
+
