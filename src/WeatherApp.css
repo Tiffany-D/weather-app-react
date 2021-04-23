@@ -32,7 +32,8 @@ footer {
 }
 h1 {
   color: #5e63b6;
-  font-size: 20px;
+  font-size: 50px;
+  margin-bottom: 4px;
 }
 
 .temp{
