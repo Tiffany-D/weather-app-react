@@ -55,7 +55,7 @@ export default function WeatherApp(props) {
         <form  onSubmit={handleSubmit}>
    
                  <div className="row">
-          <div className="col-6">
+          <div className="col-8">
          <input type="search"
                   placeholder="Enter a city..."
                 className="form-control"
