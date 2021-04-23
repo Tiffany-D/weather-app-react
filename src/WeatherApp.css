@@ -1,0 +1,33 @@
+.card {
+  flex-direction: row;
+  border-radius :30px;
+  margin: 120px;
+  margin-left: 130px;
+  max-width: 700px;
+}
+
+.form-control {
+margin: 15px;
+border-radius: 20px;
+border: blueviolet;
+}
+
+.btn {
+  background-color: #113f67;
+  color: #fcfafa;
+margin: 15px;
+margin-left: 1px;
+
+}
+
+.list {
+  list-style: none;
+  float: right;
+}
+
+footer {
+  text-align: center;
+}
+h1 {
+  color: #5e63b6;
+}

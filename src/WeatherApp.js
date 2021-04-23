@@ -1,4 +1,4 @@
-import './index.css';
+import './WeatherApp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState} from "react";
 import axios from "axios";
@@ -49,19 +49,20 @@ export default function WeatherApp(props) {
   if (weatherData.loaded) {
     return ( 
       <div className="WeatherApp">
+        
         <div className="card">
           <div className="card-body">
         <form  onSubmit={handleSubmit}>
    
                  <div className="row">
-          <div className="col-6">
+          <div className="col-5">
          <input type="search"
-                  placeholder="Type a city..."
+                  placeholder="Enter a city..."
                 className="form-control"
               onChange={cityChange}
               />
-              
-                  <div className="col-20">
+              </div>
+                  <div className="col-3">
            <input
                   type="submit"
                   value="Search"
@@ -69,7 +70,7 @@ export default function WeatherApp(props) {
                 
                   />
          
-            </div>
+            
               
             </div> 
              </div>       
@@ -90,7 +91,7 @@ export default function WeatherApp(props) {
         </div>
         </div>
            <div className="row">
-          <div className="col-7">
+          <div className="col-12">
             <div className="right">
               <ul className="list">
                 <li className="text-capitalize">Description: {weatherData.description}</li>
@@ -102,7 +103,8 @@ export default function WeatherApp(props) {
       </div>
         </div>
       </div>
-      </div>    
+        </div>
+      
   );
   } else {
     search();
