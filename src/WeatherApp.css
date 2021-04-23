@@ -9,7 +9,7 @@
 
 .form-control {
 margin: 15px;
-border-radius: 20px;
+border-radius: 15px;
 border:1px solid #113f67;
 }
 
@@ -18,6 +18,7 @@ border:1px solid #113f67;
   color: #fcfafa;
 margin: 15px;
 margin-left: 1px;
+border-radius: 15px;
 
 }
 
@@ -37,9 +38,13 @@ h1 {
 }
 
 .temp{
-  margin: 90px;
-  margin-top: 1px;
+  margin-left: 100px;
   font-weight:bold;
   font-size: 30px;
+}
+
+.day {
+  font-size: 20px;
+  margin-left: 10px;
 }
 
