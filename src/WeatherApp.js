@@ -23,6 +23,7 @@ export default function WeatherApp(props) {
         date: new Date(response.data.dt*1000),
         loaded:true,
         temperature: response.data.main.temp,
+        coordinates:response.data.coord,
         wind: response.data.wind.speed,
         humidity: response.data.main.humidity,
         description: response.data.weather[0].description,
@@ -116,7 +117,7 @@ export default function WeatherApp(props) {
               <br/>
               <br/>
               
-              <Forecast/>
+              <Forecast coordinates={weatherData.coordinates}/>
       
         </div>
       </div>
