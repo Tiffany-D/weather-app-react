@@ -32,5 +32,6 @@ console.log(response.data);
     let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
     axios.get(apiUrl).then(forecastResponse);
+    return null;
 }
 }
