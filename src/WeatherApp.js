@@ -5,6 +5,7 @@ import axios from "axios";
 import DateAndTime from "./DateAndTime";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import Forecast from "./Forecast";
 
 
 
@@ -111,12 +112,15 @@ export default function WeatherApp(props) {
                 <li> Humidity: {weatherData.humidity}%</li>
                 <li>Wind: {weatherData.wind}km/h</li>
               </ul>
+              <Forecast/>
+      
         </div>
       </div>
       </div>
         </div>
       </div>
         </div>
+        
       
   );
   } else {
