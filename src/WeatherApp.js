@@ -89,13 +89,11 @@ export default function WeatherApp(props) {
         <div className="day">
             <DateAndTime date={weatherData.date} />
             <br />
-            <br />
-            <br />
             </div>
         <div className="row">
               <div className="col-6">
-                <WeatherIcon code={weatherData.icon} />
-                  <div className="temp">
+                <WeatherIcon code={weatherData.icon} size="80" />
+                  <div className="weathertemp">
                 <WeatherTemperature celsius={weatherData.temperature} />
              </div> 
    
@@ -112,6 +110,12 @@ export default function WeatherApp(props) {
                 <li> Humidity: {weatherData.humidity}%</li>
                 <li>Wind: {weatherData.wind}km/h</li>
               </ul>
+              
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              
               <Forecast/>
       
         </div>

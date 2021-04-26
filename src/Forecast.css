@@ -1,0 +1,12 @@
+.Forecast{
+    text-align:center;
+
+}
+
+.temp {
+    font-size:15px;
+}
+
+.min {
+    opacity:0.6;
+}
