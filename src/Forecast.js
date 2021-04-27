@@ -19,10 +19,19 @@ console.log(response.data);
     return(
         <div className="ForecastWeather">
         <div className="row">
-        <div className="col">
-       <ForecastDay data={forecastData[0]} />
+        {forecastData.map(function(dailyForecast, index){ 
+        if (index < 4){ 
+            return(
+             <div className="col" key={index}>
+          <ForecastDay data={dailyForecast} />  
+          </div>
+            ); 
+    }
+        } )}
+       
+       
 </div>
-        </div>
+        
         </div>
     );
 }else{
