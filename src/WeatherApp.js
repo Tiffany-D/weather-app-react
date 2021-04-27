@@ -50,9 +50,10 @@ export default function WeatherApp(props) {
  
   if (weatherData.loaded) {
     return ( 
+      <div className="container-fluid">
       <div className="WeatherApp">
         
-        <div className="card">
+        <div className="card" max-width="18rem">
           <div className="card-body">
         <form  onSubmit={handleSubmit}>
    
@@ -93,9 +94,11 @@ export default function WeatherApp(props) {
             </div>
         <div className="row">
               <div className="col-6">
-                <WeatherIcon code={weatherData.icon} size="80" />
+              <span>
+                <WeatherIcon code={weatherData.icon} size="80" /></span>
                   <div className="weathertemp">
-                <WeatherTemperature celsius={weatherData.temperature} />
+                  <span>
+                <WeatherTemperature celsius={weatherData.temperature} /></span>
              </div> 
    
         
@@ -107,17 +110,18 @@ export default function WeatherApp(props) {
           <div className="col-12">
             <div className="right">
               <ul className="list">
-                <li className="text-capitalize">Description: {weatherData.description}</li>
-                <li> Humidity: {weatherData.humidity}%</li>
-                <li>Wind: {weatherData.wind}km/h</li>
+                <li className="text-capitalize">Description:{weatherData.description}</li>
+                <li className="humidity"> Humidity: {weatherData.humidity}%</li>
+                <li className="wind">Wind: {weatherData.wind}km/h</li>
               </ul>
               
               <br/>
               <br/>
               <br/>
               <br/>
-              
+              <br/>
               <Forecast coordinates={weatherData.coordinates}/>
+
       
         </div>
       </div>
@@ -125,7 +129,7 @@ export default function WeatherApp(props) {
         </div>
       </div>
         </div>
-        
+        </div>
       
   );
   } else {

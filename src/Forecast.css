@@ -5,8 +5,21 @@
 
 .temp {
     font-size:15px;
+    font-weight:bold;
 }
 
 .min {
     opacity:0.6;
 }
+
+.text-capitalize{
+    font-weight:bold;
+}
+
+.humidity{
+    font-weight:bold;
+}
+.wind{
+    font-weight:bold;
+}
+
