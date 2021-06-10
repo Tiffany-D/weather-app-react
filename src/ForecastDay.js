@@ -24,7 +24,7 @@ export default function ForecastDay(props){
     }
     
     return(
-         <div className="Forecast">
+         <div className="Forecast d-none d-sm-block">
         
         <div className="day-forecast">
         {day()}</div>
