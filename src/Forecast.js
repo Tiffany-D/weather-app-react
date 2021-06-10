@@ -23,7 +23,8 @@ console.log(response.data);
     if (ready){
     return(
         <div className="ForecastWeather">
-        <div className="row">
+            <div className="row">
+                <div className="d-flex justify-content-between">
         {forecastData.map(function(dailyForecast, index){ 
         if (index < 4){ 
             return(
@@ -36,7 +37,7 @@ console.log(response.data);
     }
         } )}
        
-       
+  </div>     
 </div>
         
         </div>

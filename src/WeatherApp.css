@@ -1,19 +1,19 @@
 .card {
   
-  display:center;
-  flex-direction: row;
+ 
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   border-radius :20px;
   border: 1px solid #5e63b6;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-  margin: 120px auto;
-  margin-left: 130px;
+  display: block;
+  margin: 0 auto;
   max-width:  600px;
     max-height: 800px;
 }
 
 .form-control {
 margin: 15px;
+margin-left: 30px;
 border-radius: 15px;
 border:1px solid #113f67;
 }
@@ -38,12 +38,17 @@ border-radius: 15px;
 
 footer {
   text-align: center;
+  line-height: 6;
 }
 h1 {
   color: #5e63b6;
   font-size: 50px;
-  margin-bottom: 4px;
+  display: flex;
+  justify-content: flex-start;
+  
+  
 }
+
 
 .weathertemp{
   margin-left: 50px;
@@ -53,6 +58,31 @@ h1 {
 
 .day {
   font-size: 20px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
-
+@media(max-width:576px){
+  .card{
+    width: 340px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+  }
+  h2{
+    font-size: 15px;
+  }
+  .day{
+display: flex;
+justify-content: center;
+  }
+  .temp-icon{
+    
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: space-around;
+  }
+ 
+}

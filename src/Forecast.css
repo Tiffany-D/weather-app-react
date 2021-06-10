@@ -1,6 +1,11 @@
 .Forecast{
     text-align:center;
+    margin: 30px;
 
+}
+.day-forecast{
+    display: flex;
+    justify-content: space-around;
 }
 
 .temp {
@@ -10,6 +15,7 @@
 
 .min {
     opacity:0.6;
+    
 }
 
 .text-capitalize{
@@ -23,3 +29,8 @@
     font-weight:bold;
 }
 
+@media(max-width:576px){
+    .day-forecast{
+        justify-content: flex-start;
+    }
+}

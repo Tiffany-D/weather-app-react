@@ -58,7 +58,7 @@ export default function WeatherApp(props) {
         <form  onSubmit={handleSubmit}>
    
                  <div className="row">
-          <div className="col-8">
+          <div className="col-8 d-flex justify-content-center">
          <input type="search"
                   placeholder="Enter a city..."
                 className="form-control"
@@ -84,25 +84,28 @@ export default function WeatherApp(props) {
           
       <h1>
             
-           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-</svg>{" "}{weatherData.city}
+<i class="fas fa-search-location fs-2"></i>
+{" "}{weatherData.city}
         </h1>
         <div className="day">
             <DateAndTime date={weatherData.date} />
             <br />
             </div>
         <div className="row">
-              <div className="col-6">
-              <span>
-                <WeatherIcon code={weatherData.icon} size="80" /></span>
+                <div className="col-6">
+                  <div className="temp-icon">
+              
+                    <WeatherIcon code={weatherData.icon} size="80" />
+                    </div>
                   <div className="weathertemp">
-                  <span>
-                <WeatherTemperature celsius={weatherData.temperature} /></span>
+                  
+                      <WeatherTemperature celsius={weatherData.temperature} />
+                    
+                   </div> 
              </div> 
    
         
-        </div>
+        
             </div>
             
              
@@ -119,11 +122,12 @@ export default function WeatherApp(props) {
               <br/>
               <br/>
               <br/>
-              <br/>
-              <Forecast coordinates={weatherData.coordinates}/>
-
+                    <br />
+          <div className="d-flex justify-content-center">
+              <Forecast coordinates={weatherData.coordinates}/></div>
+</div>
       
-        </div>
+        
       </div>
       </div>
         </div>
